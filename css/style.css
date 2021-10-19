@@ -1,0 +1,77 @@
+/* commons */
+
+/* prima risoluzione 360px */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.upper-side {
+    width: 100%;
+    height: calc(100% - 70px);
+    display: flex;
+}
+
+/* side column */
+
+aside{
+    background-color: blue;
+    width: 10%;
+    height: 100%;
+}
+
+
+/* content section */
+.content {
+    display: flex;
+    width: 90%;
+    height: 100%;
+    background-color: burlywood;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+/* header of content */
+
+header {
+    background-color: chartreuse;
+    flex: 0 0 50px;
+    z-index: 3;
+}
+
+/* navigation bar on content  */
+
+nav {
+    height: 10%;
+    background-color: chocolate;
+}
+
+nav > ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+}
+
+nav > ul > li {
+    margin: 0 5px;
+}
+
+/* player console */
+
+footer {
+    background-color: crimson;
+    height: 70px;
+    display: flex;
+    z-index: 2;
+}
