@@ -67,6 +67,15 @@ nav > ul > li {
     margin: 0 5px;
 }
 
+
+/* content main*/
+
+main {
+    overflow-y: auto;
+}
+
+
+
 /* player console */
 
 footer {
@@ -75,3 +84,10 @@ footer {
     display: flex;
     z-index: 2;
 }
+
+.box-row {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
