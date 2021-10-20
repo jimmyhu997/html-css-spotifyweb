@@ -6,54 +6,93 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Rubik', sans-serif;
 }
 
 .container {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-
-.upper-side {
     width: 100%;
-    height: calc(100% - 70px);
+    height: calc(100vh - 70px);
     display: flex;
 }
 
 /* side column */
 
 aside{
-    background-color: blue;
-    width: 10%;
+    background-color: black;
+    width: 55px;
     height: 100%;
+}
+
+.side-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 0;
+}
+
+.side-nav > img:first-child {
+    width: 75%;
+    margin-top: 5px;
+    filter: invert(100%);
+}
+
+.side-nav > ul {
+    margin: 15px 0;
+}
+
+.side-nav li {
+    list-style: none;
+    line-height: 35px;
+}
+
+.side-nav li > a {
+    font-size: 25px;
+    text-decoration: none;
+    color: lightgrey;
+}
+
+.side-nav li span {
+    display: none;
 }
 
 
 /* content section */
 .content {
-    display: flex;
-    width: 90%;
+    width: calc(100% - 55px);
     height: 100%;
     background-color: burlywood;
-    flex-direction: column;
-    overflow-y: auto;
+
 }
 
 /* header of content */
 
 header {
-    background-color: chartreuse;
-    flex: 0 0 50px;
-    z-index: 3;
+    background-color: black;
+    height: 90px;
+    position: fixed;
+    width: calc(100% - 55px);
+    display: flex;
+    justify-content: end;
+    align-items: center;
 }
 
+header a {
+    text-decoration: none;
+    border-radius: 2em;
+    font-size: 13px;
+    color: white;
+    border: 1px solid white;
+    padding: 13px 40px;
+}
+
+
+header > div {
+    z-index: 4;
+}
 /* navigation bar on content  */
 
 nav {
     height: 10%;
-    background-color: chocolate;
 }
 
 nav > ul {
@@ -61,17 +100,33 @@ nav > ul {
     flex-wrap: wrap;
     justify-content: center;
     list-style: none;
+    margin: 0 5px;
 }
 
 nav > ul > li {
     margin: 0 5px;
+    text-transform: uppercase;
+    line-height: 40px;
 }
 
+nav li > a {
+    text-decoration: none;
+    color: grey;
+    font-weight: 500;
+    margin: 0 5px;
+}
+
+nav li > a:hover {
+    text-decoration: underline;
+    text-decoration-color: white; 
+}
 
 /* content main*/
 
 main {
     overflow-y: auto;
+    background-color: rgb(14, 14, 43);
+    margin-top: 90px;
 }
 
 
@@ -82,7 +137,12 @@ footer {
     background-color: crimson;
     height: 70px;
     display: flex;
-    z-index: 2;
+}
+
+footer > div {
+    height: 30px;
+    background-color: aqua;
+    width: 100%;
 }
 
 .box-row {
