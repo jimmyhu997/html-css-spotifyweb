@@ -185,7 +185,9 @@ footer > div {
 }
 
 /* left side player */
-.playing {
+
+.playing,
+.option {
     width: 25%;
 }
 
@@ -218,13 +220,13 @@ footer > div {
     color: gray;
 }
 
-/* center of player */
+/* center of player console */
 
 .console {
-    width: 30%;
+    width: 38%;
     flex-direction: column;
     justify-content: space-between;
-    margin: 0 10%;
+    margin: 0 6%;
 }
 
 .console > div {
@@ -233,16 +235,16 @@ footer > div {
     height: 50%;
 }
 
-.bts ul{
+.bts ul,
+.option > ul {
     display: flex;
     justify-content: space-between;
-    flex-direction: row;
     list-style: none;
     width: 100%;
     align-items: center;
 }
 
-.bts > ul > li a{
+footer a{
     color: white;
 }
 
@@ -280,4 +282,26 @@ footer > div {
     border-radius: 15px;
 }
 
+/* right side player */
 
+.option {
+    justify-content: space-between;
+}
+
+.option > ul{
+    width: 40%;
+    font-size: 15px;
+}  
+
+.option > ul > li:nth-child(2) {
+    margin: 0 5px;
+}
+
+.option > div:last-child {
+    width: 52%;
+    margin-right: 5px;
+}
+
+.option .time-bar {
+    width: 100%;
+}
