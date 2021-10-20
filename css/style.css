@@ -61,7 +61,7 @@ aside{
     width: calc(100% - 55px);
     height: 100%;
     background-color: burlywood;
-
+    overflow-y: auto;
 }
 
 /* header of content */
@@ -104,7 +104,6 @@ nav > ul {
 }
 
 nav > ul > li {
-    margin: 0 5px;
     text-transform: uppercase;
     line-height: 40px;
 }
@@ -113,7 +112,8 @@ nav li > a {
     text-decoration: none;
     color: grey;
     font-weight: 500;
-    margin: 0 5px;
+    margin: 0 10px;
+    font-size: 15px;
 }
 
 nav li > a:hover {
@@ -121,14 +121,53 @@ nav li > a:hover {
     text-decoration-color: white; 
 }
 
+
 /* content main*/
 
-main {
-    overflow-y: auto;
-    background-color: rgb(14, 14, 43);
+main{
+    background-color: rgb(11, 11, 28);
     margin-top: 90px;
 }
 
+.row {
+    color: white;
+    margin: 25px 0 0 20px ;
+}
+
+.row > p {
+    color: gray;
+    font-size: 15px;
+    margin: 10px 0;
+}
+
+.cont-line {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cont-line > div {
+ margin-right: 10px;
+ text-align: center;
+ width: 200px;
+}
+
+.cont-line > div > img {
+    width: 100%;
+}
+
+.cont-line > div > h3 {
+    margin: 10px;
+}
+
+.cont-line > div > h5 {
+    color: gray;
+    margin-bottom: 10px;
+}
+
+#popular img {
+    border-radius: 50%;
+}
 
 
 /* player console */
@@ -139,15 +178,10 @@ footer {
     display: flex;
 }
 
-footer > div {
+/* footer > div {
     height: 30px;
     background-color: aqua;
     width: 100%;
-}
+} */
 
-.box-row {
-    display: flex;
-    flex-wrap: wrap;
-
-}
 
