@@ -21,13 +21,14 @@ aside{
     background-color: black;
     width: 55px;
     height: 100%;
+    position: relative;
+    overflow-y: hidden;
 }
 
 .side-nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 0;
 }
 
 .side-nav > img:first-child {
@@ -67,17 +68,64 @@ aside li {
     display: none;
 }
 
+/* bottom of aside */
+
+.bottom-aside {
+    position: absolute;
+    bottom: 0;
+    margin-left: 15px;
+    padding-bottom: 10px;
+    width: calc(100% - 15px);
+    display: none;
+    background-color: black;
+}
+
+.bottom-aside a {
+    text-decoration: none;
+    color: gray;
+}
+
+.bottom-aside i {
+    margin-right: 10px;
+}
+
+.bottom-aside > div:last-child > a {
+    color: white;
+    font-weight: bold;
+}
+
+.bottom-aside hr {
+    margin: 13px 0;
+    width: 85%;
+    text-align: left;
+}
+
+.bottom-aside > div:first-of-type i {
+    border: 1px solid gray;
+    font-size: 15px;
+    padding: 2px;
+    border-radius: 1em;
+}
+
+.bottom-aside > div:last-child i {
+    font-size: 25px;
+    background-color: gray;
+    border-radius: 1em;
+}
+
 /* content section */
+
 .content {
     width: calc(100% - 55px);
     height: 100%;
     overflow-y: auto;
+    background-color: black;
 }
 
 /* header of content */
 
 header {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.6);
     height: 90px;
     position: fixed;
     width: calc(100% - 55px);
@@ -95,10 +143,9 @@ header a {
     padding: 13px 40px;
 }
 
-
 header > div {
-    z-index: 4;
 }
+
 /* navigation bar on content  */
 
 nav {
@@ -157,9 +204,9 @@ main{
 }
 
 .cont-line > div {
- margin-right: 10px;
+ margin-right: 3%;
  text-align: center;
- width: 160px;
+ width: calc((100% / 2) - 3%);
 }
 
 .cont-line > div > img {
@@ -188,6 +235,7 @@ footer {
     display: flex;
     color: white;
     justify-content: space-between;
+    z-index: 999;
 }
 
 footer > div {
@@ -326,6 +374,7 @@ footer a{
     width: 100%;
 }
 
+
 @media screen and (min-width: 540px) {
 
     /* side bar  */
@@ -389,4 +438,21 @@ footer a{
         max-height: 250px;
         overflow-y: auto;
     }
+
+    .bottom-aside{
+        display: block;
+    }
+
+    .cont-line > div {
+        margin-right: 3%;
+        text-align: center;
+        width: 20%;
+        max-width: 200px;
+       }
 }
+
+
+@media screen and (max-height: 300px) {
+    .bottom-aside {display: none;}
+}
+
