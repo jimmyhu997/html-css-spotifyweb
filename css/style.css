@@ -31,16 +31,22 @@ aside{
 }
 
 .side-nav > img:first-child {
-    width: 75%;
+    width: 30px;
     margin-top: 5px;
     filter: invert(100%);
 }
+
+.side-nav > img:last-of-type {
+    display: none;
+}
+
+/* list of side bar */
 
 .side-nav > ul {
     margin: 15px 0;
 }
 
-.side-nav li {
+aside li {
     list-style: none;
     line-height: 35px;
 }
@@ -55,12 +61,16 @@ aside{
     display: none;
 }
 
+/* playlist column middle of side bar */
+
+.playlist {
+    display: none;
+}
 
 /* content section */
 .content {
     width: calc(100% - 55px);
     height: 100%;
-    background-color: burlywood;
     overflow-y: auto;
 }
 
@@ -149,7 +159,7 @@ main{
 .cont-line > div {
  margin-right: 10px;
  text-align: center;
- width: 200px;
+ width: 160px;
 }
 
 .cont-line > div > img {
@@ -177,6 +187,7 @@ footer {
     height: 90px;
     display: flex;
     color: white;
+    justify-content: space-between;
 }
 
 footer > div {
@@ -244,6 +255,14 @@ footer > div {
     align-items: center;
 }
 
+.bts {
+    justify-content: center;
+}
+
+.bts ul {
+    width: 180px;
+}
+
 footer a{
     color: white;
 }
@@ -286,6 +305,7 @@ footer a{
 
 .option {
     justify-content: space-between;
+    max-width: 250px;
 }
 
 .option > ul{
@@ -304,4 +324,69 @@ footer a{
 
 .option .time-bar {
     width: 100%;
+}
+
+@media screen and (min-width: 540px) {
+
+    /* side bar  */
+   aside {
+        min-width: 200px;
+        color: gray;
+    }
+    
+    content,
+    header {
+        width: calc(100% - 200px);
+    }
+
+    /* upper side of side bar */
+    .side-nav > img:first-child {
+        display: none;
+    }
+
+    .side-nav > img:last-of-type {
+        display: inline-block;
+        width: 130px;
+        margin-top: 20px;
+    }
+
+    .side-nav,
+    .playlist {
+        align-items: flex-start;
+        margin-left: 20px;
+    }
+    
+    .side-nav li span {
+        display: inline;
+        font-size: 15px;
+        margin-left: 8px;
+        vertical-align: middle;
+        color: gray;
+    }
+
+    /* middle of side bar */
+    .playlist { 
+        display: inline-block;
+    }
+
+    .playlist h4 {
+        color: white;
+    }
+
+    .playlist > div:first-of-type {
+        margin: 18px 0;
+    }
+
+    .playlist > div:first-of-type > a {
+        background-color: grey;
+        color: black;
+        padding: 8px 12px;
+        font-size: 22px;
+        margin-right: 8px;
+    }
+
+    .playlist > div:last-of-type {
+        max-height: 250px;
+        overflow-y: auto;
+    }
 }
